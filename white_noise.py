@@ -12,7 +12,7 @@ GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 def main():
     pygame.init()
     # Load the sound to play indefinitely
-    pygame.mixer.music.load('white_noise.mp3')
+    pygame.mixer.music.load('white_noise.ogg')
     pygame.mixer.music.play(-1)
     # Pause the sound
     pygame.mixer.music.pause()
