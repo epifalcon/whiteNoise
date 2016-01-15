@@ -10,6 +10,7 @@ GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 def main():
+    pygame.init()
     # Load the sound to play indefinitely
     pygame.mixer.music.load('white_noise.mp3')
     pygame.mixer.music.play(-1)
@@ -24,9 +25,13 @@ def main():
             if paused:
                 pygame.mixer.music.unpause()
                 paused = False
+                time.sleep(1)
+                print paused
             else:
                 pygame.mixer.music.pause()
                 paused = True
+                time.sleep(1)
+                print paused
 
 
 if __name__ == '__main__':
